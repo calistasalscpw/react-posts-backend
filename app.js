@@ -34,20 +34,20 @@ app.use(express.urlencoded({ extended: true }));
 // app.use(passport.initialize())
 // app.use(passport.session())
 
-const middleware1 = (req, res, next) => {
-    req.test = 'This is set by middleware1';
-    next();
-}
+// const middleware1 = (req, res, next) => {
+//     req.test = 'This is set by middleware1';
+//     next();
+// }
 
-const middleware2 = (req, res, next) => {
-    console.log(req.test);
-    req.test2 = 'This is set by middleware2';
-    throw new Error('error!');
-}
+// const middleware2 = (req, res, next) => {
+//     console.log(req.test);
+//     req.test2 = 'This is set by middleware2';
+//     throw new Error('error!');
+// }
 
-app.get('/', middleware1, middleware2, (req, res) => {
-    res.json([req.test, req.test2]);
-})
+// app.get('/', middleware1, middleware2, (req, res) => {
+//     res.json([req.test, req.test2]);
+// })
 
 // app.use(passport.authenticate('session'));
 
