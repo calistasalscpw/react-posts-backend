@@ -65,5 +65,5 @@ jobs:
             MONGO_URL='${{ secrets.MONGO_URL }}'
             EOF
             
-            docker-compose down || true
-            docker-compose up --build -d
+            sudo docker-compose down || true
+            sudo docker-compose up --build -d
